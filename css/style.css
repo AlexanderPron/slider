@@ -1,0 +1,110 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-img{
+    max-width: 70%;
+    max-height: 100%;
+    
+}
+.carusel{
+    width: 50%;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.slider{
+    width: 100%;
+    height: 70%;
+    background-color: blue;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+}
+.next{
+    position: absolute;
+    top: 40%; right: 0px;
+
+}
+.prev{
+    position: absolute;
+    top: 40%; left: 0px;
+
+}
+.galery{
+    display: inline-flex;
+    width: 100%;
+    height: 30%;
+    background-color: red;
+
+}
+
+/* ========================================================== Стили стрелок карусели================================================================= */
+.arrow-6 {
+    margin:20px;
+}
+.arrow-6 svg {
+    width: 50px;
+    height: auto;
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+}
+.arrow-6 svg polygon, 
+.arrow-6 svg path {
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #337AB7;
+}
+.arrow-6 svg:hover polygon, 
+.arrow-6 svg:hover path {
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #000;
+}
+.arrow-6 svg:hover .arrow-6-pl {
+    animation: arrow-6-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-6 svg:hover .arrow-6-pl-fixed {
+    animation: arrow-6-fixed-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+
+/* ========================================================== Конец стилей стрелок карусели============================================================ */
+
+
+
+
+
+
+
+
+
+/* ========================================================== Стили стрелок карусели================================================================= */
+@keyframes arrow-6-anim {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(-0.1rem);
+    }
+    100% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+}
+@keyframes arrow-6-fixed-anim {
+    5% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* ========================================================== Конец стилей стрелок карусели============================================================ */
